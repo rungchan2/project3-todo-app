@@ -1,3 +1,4 @@
+/* eslint-disable */
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import react from "eslint-plugin-react";
@@ -13,6 +14,12 @@ export default tseslint.config(
       react: {
         version: "detect",
       },
+    },
+    rules: {
+      "prettier/prettier": "off",
+    },
+    env: {
+      node: true,
     },
   },
 );
