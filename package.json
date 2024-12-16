@@ -1,9 +1,9 @@
 {
-  "name": "react-boilerplate",
-  "version": "1.0.0",
+  "name": "project3-todo-app",
+  "version": "0.0.1",
   "main": "src/app.js",
   "type": "module",
-  "license": "MIT",
+  "license": "",
   "scripts": {
     "start": "yarn dev",
     "test": "vitest run --coverage",
@@ -40,7 +40,10 @@
     "vitest": "^2.1.8"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.62.7",
     "@testing-library/react": "^16.1.0",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.2",

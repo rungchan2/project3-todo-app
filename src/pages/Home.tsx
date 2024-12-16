@@ -8,7 +8,8 @@ const Home: React.FC = (): React.ReactElement => {
 
   return (
     <section>
-      <h1>Welcome!</h1>
+      <h1>안녕하세용</h1>
+      <p>보일러플레이트 사용해서 만든 페이지입니다.</p>
       <p>Current count: {count}</p>
       <Link to="/count">Go to count page</Link>
     </section>
