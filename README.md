@@ -1,55 +1,38 @@
-React Boilerplate
+Todo APP
 ========
 
-![Build](https://github.com/chuntley/react-boilerplate/workflows/Build/badge.svg)
+## 프로젝트 개요
+프로젝트와 할일을 관리할 수 있는 웹 애플리케이션입니다. 사용자는 프로젝트를 생성하고, 팀원을 초대하며, 할일을 관리할 수 있습니다.
 
-Installation
----
+## 기술 스택
 
-Requires Node >=20.x, excluding 21.x
+### 백엔드
+- **런타임**: Node.js (>=20.x, 21.x 제외)
+- **프레임워크**: Express.js
+- **데이터베이스**: MySQL
+- **ORM**: Sequelize
+- **인증**: JWT (JSON Web Tokens)
 
-Install Yarn: https://yarnpkg.com/lang/en/docs/install/
+### API 구조
+- **사용자 관리**: `/api/users`
+  - 회원가입, 로그인, 사용자 정보 관리
+- **프로젝트 관리**: `/api/projects`
+  - 프로젝트 CRUD, 멤버 관리
+- **할일 관리**: `/api/todos`
+  - 할일 CRUD, 프로젝트별 할일 관리
 
-Clone and install dependencies:
+## 주요 기능
+- 사용자 인증 및 권한 관리
+- 프로젝트 생성 및 관리
+- 프로젝트 멤버 관리 (역할: admin, member)
+- 할일 생성 및 관리
+- 프로젝트별 할일 목록 조회
 
-```bash
-$ git clone git@github.com:chuntley/react-boilerplate.git
-$ cd react-boilerplate
-$ yarn
-```
+## 설치 방법
 
-Development
----
-To lift the dev server with hot module reloading.
-```bash
-$ yarn dev
-```
-The output of the command will list the URL to the dev server.
+### 요구사항
+- Node.js >=20.x (21.x 제외)
+- MySQL 8.0 이상
+- Yarn 패키지 매니저
 
-Build
----
-
-To bundle the React application
-```bash
-$ yarn dist
-```
-
-Testing
----
-
-```bash
-# run all tests including coverage report and linting
-$ yarn test
-
-# run tests in watch mode
-$ yarn test:watch
-
-# run single test without coverage or linting
-$ yarn test:lite
-```
-
-Linting
----
-```bash
-$ yarn lint
-```
+### 설치 단계
