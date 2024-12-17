@@ -11,7 +11,6 @@ Todo APP
 - **프레임워크**: Express.js
 - **데이터베이스**: MySQL
 - **ORM**: Sequelize
-- **인증**: JWT (JSON Web Tokens)
 
 ### API 구조
 - **사용자 관리**: `/api/users`
