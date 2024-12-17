@@ -3,6 +3,26 @@ import { User } from '../models/index.js';
 
 const router = express.Router();
 
+//login
+router.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+  const user = await User.findOne({ where: { username } });
+  if (!user) {
+    return res.status(401).json({ message: '사용자를 찾을 수 없습니다.' });
+  }
+  if (user.password !== password) {
+    return res.status(401).json({ message: '비밀번호가 일치하지 않습니다.' });
+  }
+  res.json({ message: '로그인 성공', user });
+});
+
+//signup
+router.post('/signup', async (req, res) => {
+  const { username, password, email } = req.body;
+  const user = await User.create({ username, password, email });
+  res.json({ message: '회원가입 성공', user });
+});
+
 // 모든 사용자 조회
 router.get('/', async (req, res) => {
   try {

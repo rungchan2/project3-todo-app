@@ -36,8 +36,6 @@ router.post('/', async (req, res) => {
         message: '프로젝트 멤버 추가 권한이 없습니다.' 
       });
     }
-
-    //멤버인지 확인
     const existingMember = await ProjectMember.findOne({
       where: {
         project_id: project_id,
@@ -109,7 +107,6 @@ router.put('/:memberId', async (req, res) => {
 // 프로젝트 멤버 삭제
 router.delete('/:memberId', async (req, res) => {
   try {
-    // 요청한 사용자가 프로젝트의 admin인지 확인
     const member = await ProjectMember.findByPk(req.params.memberId);
 
     if (!member) {
